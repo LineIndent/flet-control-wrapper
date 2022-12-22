@@ -1,0 +1,92 @@
+{
+  "name": "flet-wrapper",
+  "displayName": "Flet Control Wrapper",
+  "description": "Wrap Flet controls easily by highlighting the contents.",
+  "publisher": "Line Indent",
+  "version": "1.0.0",
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrgnhnt96/flet-wrapper"
+  },
+  "engines": {
+    "vscode": "^1.44.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:flet-wrapper.Container",
+    "onCommand:flet-wrapper.Column",
+    "onCommand:flet-wrapper.Row",
+    "onCommand:flet-wrapper.Control"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "flet-wrapper.Container",
+        "title": "Container Wrapper"
+      },
+      {
+        "command": "flet-wrapper.Column",
+        "title": "Column Wrapper"
+      },
+      {
+        "command": "flet-wrapper.Row",
+        "title": "Row Wrapper"
+      },
+      {
+        "command": "flet-wrapper.Control",
+        "title": "Any Control Wrapper"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "flet-wrapper.Container",
+        "key": "alt+c",
+        "mac": "alt+c",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "flet-wrapper.Column",
+        "key": "alt+o",
+        "mac": "alt+o",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "flet-wrapper.Row",
+        "key": "alt+r",
+        "mac": "alt+r",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "flet-wrapper.Control",
+        "key": "alt+w",
+        "mac": "alt+w",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint src --ext ts",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.44.0",
+    "@types/glob": "^7.1.1",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^13.11.0",
+    "eslint": "^6.8.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "glob": "^7.1.6",
+    "mocha": "^7.1.1",
+    "typescript": "^3.8.3",
+    "vscode-test": "^1.3.0"
+  }
+}
