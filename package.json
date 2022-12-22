@@ -7,7 +7,7 @@
   "icon": "images/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mrgnhnt96/flet-wrapper"
+    "url": "https://github.com/LineIndent/flet-control-wrapper"
   },
   "engines": {
     "vscode": "^1.44.0"
